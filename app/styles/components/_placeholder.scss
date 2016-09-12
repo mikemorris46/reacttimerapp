@@ -1,0 +1,24 @@
+$placeholder-color: #808;
+$placeholder-weight: 700;
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $placeholder-color;
+  font-weight: $placeholder-weight;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $placeholder-color;
+  font-weight: $placeholder-weight;
+  opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $placeholder-color;
+  font-weight: $placeholder-weight;
+  opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $placeholder-color;
+  font-weight: $placeholder-weight;
+}
