@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CountDown extends Component {
+class Countdown extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class CountDown extends Component {
   }
 }
 
-export default CountDown;
+export default Countdown;
