@@ -34,14 +34,25 @@ class Countdown extends Component {
     }
   };
 
+  componentWillUnmount() {
+    console.log('component will unmount');
+    clearInterval(this.timer);
+    this.timer = undefined;
+  };
+
   startTimer() {
     let newCount = 0;
 
     this.timer = setInterval(() => {
       newCount =  this.state.count - 1;
+
       this.setState({
         count: newCount >= 0 ? newCount : 0
       });
+
+      if (newCount === 0) {
+        this.setState({ countdownStatus: 'stopped'});
+      }
     }, 1000);
   };
 
@@ -55,7 +66,7 @@ class Countdown extends Component {
   handleStatusChange(newStatus) {
     this.setState({
       countdownStatus: newStatus
-    })
+    });
   };
 
   render() {
