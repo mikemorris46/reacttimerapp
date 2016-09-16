@@ -35,7 +35,6 @@ class Countdown extends Component {
   };
 
   componentWillUnmount() {
-    console.log('component will unmount');
     clearInterval(this.timer);
     this.timer = undefined;
   };
@@ -44,7 +43,7 @@ class Countdown extends Component {
     let newCount = 0;
 
     this.timer = setInterval(() => {
-      newCount =  this.state.count - 1;
+      newCount =  --this.state.count;
 
       this.setState({
         count: newCount >= 0 ? newCount : 0
